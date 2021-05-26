@@ -17,6 +17,7 @@ public class Fraccion {
  * 
  * 
  */
+
 	public static Fraccion simplifica(Fraccion entrada) {
 		int num2= entrada.getDenominador();
 		int num1= entrada.getNumerador();
@@ -36,14 +37,22 @@ public class Fraccion {
 
 		return new Fraccion(num3,num4);
 	}
-	/*
+
 	public static Fraccion suma(Fraccion sumando1, Fraccion sumando2) {
+		int denmComun= sumando1.getDenominador()* sumando2.getDenominador();
+
+		int numerdor1= sumando1.getNumerador()* sumando2.getDenominador();
+		int numerador2= sumando2.getNumerador()* sumando1.getDenominador();
+		Fraccion suma= new Fraccion(numerdor1+numerador2,denmComun);
+		return simplifica(suma);
 	}
 	public static Fraccion multiplicacion(Fraccion sumando1, Fraccion sumando2) {
+		return simplifica(new Fraccion(sumando1.getNumerador()*sumando2.getDenominador(),sumando2.getNumerador()* sumando1.getDenominador()));
 	}
 	public static Fraccion division(Fraccion sumando1, Fraccion sumando2) {
+		return simplifica(new Fraccion(sumando1.getNumerador()*sumando2.getNumerador(),sumando2.getDenominador()* sumando1.getDenominador()));
 	}
-*/
+
 	public int getNumerador() {
 		return numerador;
 	}
